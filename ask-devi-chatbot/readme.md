@@ -8,6 +8,7 @@ To integrate with a real astrology engine (like [astrologyapi.com](https://astro
 
 We’ve preserved the backend interface to allow easy swapping of this logic.
 
+![image](https://github.com/user-attachments/assets/7febaa3e-5716-4a77-abee-97c220cc7505)
 
 
 # 🪷 Ask Devi: Vedic Astrology Chatbot
