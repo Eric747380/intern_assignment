@@ -2,9 +2,14 @@
 
 This project currently uses simulated astrology chart data to avoid API limitations and keep development free.
 
-To integrate with a real astrology engine (like [astrologyapi.com](https://astrologyapi.com)):
-- Replace the mock chart response in `backend/app.py`
-- Provide user birth data, convert place to lat/lng, and call the desired API endpoint
+provide star signs based on date and place and time of birth:
+ implemented the basic birth chart parser 🌌 so Ask Devi can provide real Sun, Moon, and Ascendant signs from birth details.
+
+We’ll use:
+
+🗺️ geopy — for lat/lon of birthplace
+
+🪐 pyswisseph (Swiss Ephemeris) — for planetary positions
 
 We’ve preserved the backend interface to allow easy swapping of this logic.
 
