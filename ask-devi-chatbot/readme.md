@@ -31,14 +31,27 @@ We’ve preserved the backend interface to allow easy swapping of this logic.
 
 ## 🧪 How to Run
 
+
+
 ### Backend
 
 ```bash
 cd backend
+.\venv\Scripts\activate
 pip install -r requirements.txt
 python app.py
 
 ### frontend
+
+
+
 cd frontend
 npm install
+
+in powershell
+$env:NODE_OPTIONS="--openssl-legacy-provider"
+npm start
+
+in cmd prompt
+set NODE_OPTIONS=--openssl-legacy-provider
 npm start

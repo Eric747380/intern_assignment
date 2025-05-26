@@ -69,33 +69,30 @@ def ask_question():
     question = data.get("question", "")
     birth_details = data.get("birthDetails", {})
 
-    # Generate a simple session key (or use UUID later)
     session_key = f"{birth_details.get('name')}_{birth_details.get('dateOfBirth')}_{birth_details.get('timeOfBirth')}"
-
-    # Add question to memory
     session_memory[session_key].append({"role": "user", "text": question})
 
     print("Question received:", question)
     print("Birth details:", birth_details)
 
     # 🔍 Retrieve BPHS chunks
-    relevant_chunks = retrieve_relevant_chunks(question, top_k=2)
-    # Return chapter name from first chunk (can improve later)
+    relevant_chunks = retrieve_relevant_chunks(question, top_k=1)  # Only 1 chunk
     top_chunk = relevant_chunks[0] if relevant_chunks else None
     chapter = top_chunk.get('chapter', 'Unknown') if top_chunk else 'Unknown'
     chapter_num = top_chunk.get('chapter_number', '?')
     source = f"📖 Source: Chapter {chapter_num} — {chapter}"
 
-    bphs_context = "\n\n".join(
-        [f"[{c['chapter_title']}]\n{c['content']}" for c in relevant_chunks]
+    # Truncate content to 500 characters
+    bphs_context = (
+        f"[{top_chunk['chapter_title']}]\n{top_chunk['content'][:500]}..." if top_chunk else ""
     )
-    # Keep last 2 messages (user + Devi)
-    recent_history = list(session_memory[session_key])[-2:]
+
+    # Only last user message
+    recent_history = list(session_memory[session_key])[-1:]
     chat_history_str = "\n".join([f"{m['role'].capitalize()}: {m['text']}" for m in recent_history])
 
     # 🧠 Build prompt
-    # prompt = f"""You are Devi, a wise Vedic astrologer trained in the ancient text Brihat Parasara Hora Sastra (BPHS).
-    prompt = f"""Answer based on the BPHS excerpts and the conversation so far.
+    prompt = f"""Answer based on the BPHS excerpt and the conversation so far.
 
 User's Birth Chart:
 Sun Sign: {birth_details.get('sunSign', 'Unknown')}
@@ -104,7 +101,7 @@ Ascendant: {birth_details.get('ascendant', 'Unknown')}
 Conversation so far:
 {chat_history_str}
 
-Relevant BPHS Excerpts:
+Relevant BPHS Excerpt:
 {bphs_context}
 
 Answer the user's question using only the BPHS and your astrological reasoning.
@@ -115,17 +112,12 @@ Answer:"""
     print("\n--- Prompt Sent to LLM ---\n")
     print(prompt)
 
-    # 🤖 Generate answer
-    # answer = call_hf_model(prompt)
     answer = call_llm_local(prompt)
-
-    # Add Devi's reply to memory
     session_memory[session_key].append({"role": "devi", "text": answer})
 
-
     return jsonify({
-    "answer": answer,
-    "source": source
+        "answer": answer,
+        "source": source
     })
 
 
