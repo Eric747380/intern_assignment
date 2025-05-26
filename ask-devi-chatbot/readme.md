@@ -13,7 +13,8 @@ We’ll use:
 
 We’ve preserved the backend interface to allow easy swapping of this logic.
 
-![image](https://github.com/user-attachments/assets/7febaa3e-5716-4a77-abee-97c220cc7505)
+![image](https://github.com/user-attachments/assets/19af10d7-29b8-46cf-aef0-0c65ba9bde88)
+
 
 
 # 🪷 Ask Devi: Vedic Astrology Chatbot
