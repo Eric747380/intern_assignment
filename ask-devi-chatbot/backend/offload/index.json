@@ -1,0 +1,242 @@
+{
+  "transformer.h.22.input_layernorm.weight": {
+    "dtype": "bfloat16",
+    "shape": [
+      2048
+    ]
+  },
+  "transformer.h.22.input_layernorm.bias": {
+    "dtype": "bfloat16",
+    "shape": [
+      2048
+    ]
+  },
+  "transformer.h.22.self_attention.query_key_value.weight": {
+    "dtype": "bfloat16",
+    "shape": [
+      6144,
+      2048
+    ]
+  },
+  "transformer.h.22.self_attention.query_key_value.bias": {
+    "dtype": "bfloat16",
+    "shape": [
+      6144
+    ]
+  },
+  "transformer.h.22.self_attention.dense.weight": {
+    "dtype": "bfloat16",
+    "shape": [
+      2048,
+      2048
+    ]
+  },
+  "transformer.h.22.self_attention.dense.bias": {
+    "dtype": "bfloat16",
+    "shape": [
+      2048
+    ]
+  },
+  "transformer.h.22.post_attention_layernorm.weight": {
+    "dtype": "bfloat16",
+    "shape": [
+      2048
+    ]
+  },
+  "transformer.h.22.post_attention_layernorm.bias": {
+    "dtype": "bfloat16",
+    "shape": [
+      2048
+    ]
+  },
+  "transformer.h.22.mlp.dense_h_to_4h.weight": {
+    "dtype": "bfloat16",
+    "shape": [
+      8192,
+      2048
+    ]
+  },
+  "transformer.h.22.mlp.dense_h_to_4h.bias": {
+    "dtype": "bfloat16",
+    "shape": [
+      8192
+    ]
+  },
+  "transformer.h.22.mlp.dense_4h_to_h.weight": {
+    "dtype": "bfloat16",
+    "shape": [
+      2048,
+      8192
+    ]
+  },
+  "transformer.h.22.mlp.dense_4h_to_h.bias": {
+    "dtype": "bfloat16",
+    "shape": [
+      2048
+    ]
+  },
+  "transformer.h.23.input_layernorm.weight": {
+    "dtype": "bfloat16",
+    "shape": [
+      2048
+    ]
+  },
+  "transformer.h.23.input_layernorm.bias": {
+    "dtype": "bfloat16",
+    "shape": [
+      2048
+    ]
+  },
+  "transformer.h.23.self_attention.query_key_value.weight": {
+    "dtype": "bfloat16",
+    "shape": [
+      6144,
+      2048
+    ]
+  },
+  "transformer.h.23.self_attention.query_key_value.bias": {
+    "dtype": "bfloat16",
+    "shape": [
+      6144
+    ]
+  },
+  "transformer.h.23.self_attention.dense.weight": {
+    "dtype": "bfloat16",
+    "shape": [
+      2048,
+      2048
+    ]
+  },
+  "transformer.h.23.self_attention.dense.bias": {
+    "dtype": "bfloat16",
+    "shape": [
+      2048
+    ]
+  },
+  "transformer.h.23.post_attention_layernorm.weight": {
+    "dtype": "bfloat16",
+    "shape": [
+      2048
+    ]
+  },
+  "transformer.h.23.post_attention_layernorm.bias": {
+    "dtype": "bfloat16",
+    "shape": [
+      2048
+    ]
+  },
+  "transformer.h.23.mlp.dense_h_to_4h.weight": {
+    "dtype": "bfloat16",
+    "shape": [
+      8192,
+      2048
+    ]
+  },
+  "transformer.h.23.mlp.dense_h_to_4h.bias": {
+    "dtype": "bfloat16",
+    "shape": [
+      8192
+    ]
+  },
+  "transformer.h.23.mlp.dense_4h_to_h.weight": {
+    "dtype": "bfloat16",
+    "shape": [
+      2048,
+      8192
+    ]
+  },
+  "transformer.h.23.mlp.dense_4h_to_h.bias": {
+    "dtype": "bfloat16",
+    "shape": [
+      2048
+    ]
+  },
+  "transformer.ln_f.weight": {
+    "dtype": "bfloat16",
+    "shape": [
+      2048
+    ]
+  },
+  "transformer.ln_f.bias": {
+    "dtype": "bfloat16",
+    "shape": [
+      2048
+    ]
+  },
+  "transformer.h.21.input_layernorm.weight": {
+    "dtype": "bfloat16",
+    "shape": [
+      2048
+    ]
+  },
+  "transformer.h.21.input_layernorm.bias": {
+    "dtype": "bfloat16",
+    "shape": [
+      2048
+    ]
+  },
+  "transformer.h.21.self_attention.query_key_value.weight": {
+    "dtype": "bfloat16",
+    "shape": [
+      6144,
+      2048
+    ]
+  },
+  "transformer.h.21.self_attention.query_key_value.bias": {
+    "dtype": "bfloat16",
+    "shape": [
+      6144
+    ]
+  },
+  "transformer.h.21.self_attention.dense.weight": {
+    "dtype": "bfloat16",
+    "shape": [
+      2048,
+      2048
+    ]
+  },
+  "transformer.h.21.self_attention.dense.bias": {
+    "dtype": "bfloat16",
+    "shape": [
+      2048
+    ]
+  },
+  "transformer.h.21.post_attention_layernorm.weight": {
+    "dtype": "bfloat16",
+    "shape": [
+      2048
+    ]
+  },
+  "transformer.h.21.post_attention_layernorm.bias": {
+    "dtype": "bfloat16",
+    "shape": [
+      2048
+    ]
+  },
+  "transformer.h.21.mlp.dense_h_to_4h.weight": {
+    "dtype": "bfloat16",
+    "shape": [
+      8192,
+      2048
+    ]
+  },
+  "transformer.h.21.mlp.dense_h_to_4h.bias": {
+    "dtype": "bfloat16",
+    "shape": [
+      8192
+    ]
+  },
+  "transformer.h.21.mlp.dense_4h_to_h.weight": {
+    "dtype": "bfloat16",
+    "shape": [
+      2048,
+      8192
+    ]
+  },
+  "transformer.h.21.mlp.dense_4h_to_h.bias": {
+    "dtype": "bfloat16",
+    "shape": [
+      2048
+    ]
+  }
+}
